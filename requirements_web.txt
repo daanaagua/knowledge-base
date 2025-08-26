@@ -1,0 +1,11 @@
+flask
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+scikit-learn
+python-dotenv
+openai
+python-docx
+openpyxl
+requests
