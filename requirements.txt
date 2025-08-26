@@ -1,10 +1,6 @@
-sentence-transformers
+Flask
 faiss-cpu
+requests
+dashscope
 numpy
-pandas
-scikit-learn
-streamlit
-python-dotenv
-openai
-python-docx
-openpyxl
+sentence-transformers
