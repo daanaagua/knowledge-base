@@ -5,7 +5,8 @@
       "src": "app_minimal.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "15mb"
+        "maxLambdaSize": "15mb",
+        "memory": 512
       }
     }
   ],
@@ -18,10 +19,5 @@
   "env": {
     "PYTHONPATH": ".",
     "FLASK_ENV": "production"
-  },
-  "functions": {
-    "app_minimal.py": {
-      "memory": 512
-    }
   }
 }
