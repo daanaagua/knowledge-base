@@ -2,14 +2,26 @@
   "version": 2,
   "builds": [
     {
-      "src": "app_optimized.py",
-      "use": "@vercel/python"
+      "src": "app_minimal.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb"
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app_optimized.py"
+      "dest": "app_minimal.py"
     }
-  ]
+  ],
+  "env": {
+    "PYTHONPATH": ".",
+    "FLASK_ENV": "production"
+  },
+  "functions": {
+    "app_minimal.py": {
+      "memory": 512
+    }
+  }
 }
