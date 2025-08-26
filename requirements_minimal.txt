@@ -2,4 +2,17 @@ flask
 numpy
 scikit-learn
 requests
+>>>>>>> 5a19f5d207b77fb065a59f9da4eb0d8584eb16cc
+openai
+flask
+numpy
+scikit-learn
+requests
+openai
+=======
+flask
+numpy
+scikit-learn
+requests
+>>>>>>> 5a19f5d207b77fb065a59f9da4eb0d8584eb16cc
 openai
