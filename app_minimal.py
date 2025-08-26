@@ -84,38 +84,6 @@ KNOWLEDGE_BASE = {
 def index():
     return render_template_string(HTML_TEMPLATE)
 
-@app.route('/api/query', methods=['POST'])
-def query():
-    try:
-        data = request.get_json()
-        question = data.get('question', '').strip()
-        
-        if not question:
-            return jsonify({'success': False, 'error': '问题不能为空'})
-        
-        # 简单的关键词匹配
-        answer = "抱歉，我没有找到相关信息。"
-        question_lower = question.lower()
-        
-        for key, value in KNOWLEDGE_BASE.items():
-            if key.lower() in question_lower or any(word in question_lower for word in key.split()):
-                answer = value
-                break
-        
-        # 如果没有匹配到，提供通用回答
-        if answer == "抱歉，我没有找到相关信息。":
-            if any(word in question_lower for word in ['什么', '是什么', 'what', '介绍']):
-                answer = "这是一个很好的问题。我的知识库包含AI、机器学习、深度学习、Python和Flask等主题的信息。请尝试询问这些主题的相关问题。"
-        
-        return jsonify({
-            'success': True,
-            'answer': answer,
-            'timestamp': datetime.now().isoformat()
-        })
-        
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)})
-
 @app.route('/health')
 def health():
     return jsonify({'status': 'healthy', 'timestamp': datetime.now().isoformat()})
