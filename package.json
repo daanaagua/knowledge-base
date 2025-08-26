@@ -1,0 +1,16 @@
+{
+  "name": "knowledge-base-nodejs",
+  "version": "1.0.0",
+  "description": "Lightweight knowledge base with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

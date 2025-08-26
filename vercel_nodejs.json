@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "app_ultra_light.py",
-      "use": "@vercel/python"
+      "src": "app.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app_ultra_light.py"
+      "dest": "app.js"
     }
   ]
 }
